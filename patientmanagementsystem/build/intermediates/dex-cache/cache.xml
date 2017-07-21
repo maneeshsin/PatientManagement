@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/manish/Manish_Workspace/android/PatientManagementSystem/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="438985533f49cb8c3b3af26dfa287e65dc00d8e4">
+        <dex dex="/home/manish/Manish_Workspace/android/PatientManagementSystem/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_540c5036b19de196585c0937c3c76fc393b3dfb0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/manish/Manish_Workspace/android/PatientManagementSystem/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/manish/Manish_Workspace/android/PatientManagementSystem/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bddc4da955c7e8ecfea7dd45795ac5b6141135a9/classes.dex" />
+    </item>
+
+</items>
