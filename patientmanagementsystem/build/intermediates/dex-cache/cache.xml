@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/home/manish/Manish_Workspace/android/PatientManagementSystem/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/manish/Manish_Workspace/android/android-project2/patientmanagementsystem/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="438985533f49cb8c3b3af26dfa287e65dc00d8e4">
-        <dex dex="/home/manish/Manish_Workspace/android/PatientManagementSystem/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_540c5036b19de196585c0937c3c76fc393b3dfb0/classes.dex" />
+        sha1="29375bf76cc0a6530aa2bb3f25231b8e408137cc">
+        <dex dex="/home/manish/Manish_Workspace/android/android-project2/patientmanagementsystem/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_67fbf6e2f218077023aca93fec720639d08e4823/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/manish/Manish_Workspace/android/PatientManagementSystem/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/manish/Manish_Workspace/android/android-project2/patientmanagementsystem/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/manish/Manish_Workspace/android/PatientManagementSystem/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bddc4da955c7e8ecfea7dd45795ac5b6141135a9/classes.dex" />
+        <dex dex="/home/manish/Manish_Workspace/android/android-project2/patientmanagementsystem/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1befed0949186c49063f68cf87f620bb15791635/classes.dex" />
     </item>
 
 </items>
