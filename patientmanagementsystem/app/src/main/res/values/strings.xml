@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PatientManagementSystem</string>
+    <string name="app_name">Patient Management System</string>
     <string name="doctor_login">Doctor Login</string>
     <string name="user">Enter UserName</string>
     <string name="title_activity_register">RegisterActivity</string>

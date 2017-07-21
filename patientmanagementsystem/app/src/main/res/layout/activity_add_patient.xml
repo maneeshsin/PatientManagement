@@ -18,10 +18,13 @@
 
             <TextView
                 android:id="@+id/textView2"
+                android:text="Add Patient"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
-                android:text="Add Patient"/>
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textSize="24sp"/>
         </TableRow>
 
         <TableRow
@@ -30,6 +33,7 @@
 
             <TextView
                 android:id="@+id/textView7"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="First Name"/>
@@ -49,6 +53,7 @@
 
             <TextView
                 android:id="@+id/textView7"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Last Name"/>
@@ -68,6 +73,7 @@
 
             <TextView
                 android:id="@+id/textView7"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"/>
@@ -87,6 +93,7 @@
 
             <TextView
                 android:id="@+id/textView7"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mobile"/>
@@ -106,6 +113,7 @@
 
             <TextView
                 android:id="@+id/textView3"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Age"/>
@@ -125,6 +133,7 @@
 
             <TextView
                 android:id="@+id/textView3"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Blood Group"/>
@@ -143,26 +152,8 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gender"/>
-
-            <EditText
-                android:id="@+id/editText4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textMultiLine"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
                 android:id="@+id/textView7"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gender"/>

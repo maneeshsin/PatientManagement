@@ -20,9 +20,10 @@
 
             <TextView
                 android:id="@+id/textView8"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enter UserName"
+                android:text="User Name"
 
                 />
 
@@ -45,9 +46,10 @@
 
             <TextView
                 android:id="@+id/textView9"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enter Password"/>
+                android:text="Password"/>
 
             <EditText
                 android:id="@+id/editText8"
@@ -67,6 +69,7 @@
 
             <TextView
                 android:id="@+id/textView10"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Registration Code"/>
