@@ -1,5 +1,6 @@
 package maneesh.com.patientmanagementsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,11 +14,33 @@ public class DoctorMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_menu);
         boolean isAdmin = getIntent().getExtras().getBoolean("admin");
-        if (isAdmin) {
+        if (!isAdmin) {
             btnShowRegistration = (Button) findViewById(R.id.btnGenerateCode);
             if (btnShowRegistration != null) {
-                btnShowRegistration.setVisibility(View.VISIBLE);
+                btnShowRegistration.setVisibility(View.GONE);
             }
         }
     }
+
+    public void OnClickSearchByName(View view) {
+        Intent intent = new Intent(this, SearchByNameActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void OnClickSearchByDate(View view) {
+        Intent intent = new Intent(this, SearchByDateActivity.class);
+        startActivity(intent);
+    }
+
+    public void OnClickAddPatient(View view) {
+        Intent intent = new Intent(this, AddPatientActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void OnClickGenerateRegistrationCode(View view) {
+
+    }
+
 }

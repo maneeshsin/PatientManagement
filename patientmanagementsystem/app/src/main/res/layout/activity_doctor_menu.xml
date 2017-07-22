@@ -29,12 +29,13 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnAddPatient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/textView"
             android:layout_below="@+id/textView"
             android:layout_marginTop="24dp"
+            android:onClick="OnClickAddPatient"
             android:text="Add Patient"/>
     </TableRow>
 
@@ -43,13 +44,14 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnSearchByDate"
             android:layout_width="119dp"
             android:layout_height="51dp"
-            android:layout_alignStart="@+id/button"
-            android:layout_below="@+id/button"
+            android:layout_alignStart="@+id/btnAddPatient"
+            android:layout_below="@+id/btnAddPatient"
             android:layout_marginTop="24dp"
-            android:text="Search Date  "/>
+            android:onClick="OnClickSearchByDate"
+            android:text="Search By Date"/>
     </TableRow>
 
     <TableRow
@@ -57,12 +59,13 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnSearchByName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/button2"
-            android:layout_below="@+id/button2"
+            android:layout_alignStart="@+id/btnSearchByDate"
+            android:layout_below="@+id/btnSearchByDate"
             android:layout_marginTop="20dp"
+            android:onClick="OnClickSearchByName"
             android:text="Search By Name"/>
     </TableRow>
     <TableRow
@@ -73,11 +76,11 @@
             android:id="@+id/btnGenerateCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/button2"
-            android:layout_below="@+id/button2"
+            android:layout_alignStart="@+id/btnSearchByDate"
+            android:layout_below="@+id/btnSearchByDate"
             android:layout_marginTop="20dp"
-            android:text="Generate Registration Code"
-            android:visibility="gone"/>
+            android:onClick="OnClickGenerateRegistrationCode"
+            android:text="Generate Registration Code"/>
     </TableRow>
 
 
