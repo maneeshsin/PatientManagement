@@ -65,5 +65,20 @@
             android:layout_marginTop="20dp"
             android:text="Search By Name"/>
     </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnGenerateCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button2"
+            android:layout_below="@+id/button2"
+            android:layout_marginTop="20dp"
+            android:text="Generate Registration Code"
+            android:visibility="gone"/>
+    </TableRow>
+
 
 </TableLayout>

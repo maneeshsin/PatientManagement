@@ -38,15 +38,11 @@
                 />
 
             <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/edtUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textMultiLine"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                android:inputType="text"/>
 
         </TableRow>
 
@@ -62,15 +58,11 @@
                 android:text="Password"/>
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/edtPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textMultiLine"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                android:inputType="textPassword"/>
         </TableRow>
 
         <TableRow
@@ -87,13 +79,15 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/btnLogin"
+                    android:onClick="onClickLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Login"/>
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/btnRegister"
+                    android:onClick="onClickRegister"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Register"/>
