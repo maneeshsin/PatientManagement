@@ -34,6 +34,10 @@ public class RegisterActivity extends AppCompatActivity {
         txtUserName = (EditText) findViewById(R.id.edtRegUserName);
         txtPassword = (EditText) findViewById(R.id.editRegPassword);
         txtRegistrationCode = (EditText) findViewById(R.id.edtRegCode);
+        registerNewUser();
+    }
+
+    private void registerNewUser() {
         String userName = null;
         String userPassword = null;
         String userRegistrationCode = null;
@@ -52,16 +56,8 @@ public class RegisterActivity extends AppCompatActivity {
                     int status = rs.getInt(0);
 
                     if (status == 1) {
-                        //insert into doctor table and registration table set
-                        if (userName != null && userPassword != null) {
-                            if (dbLogin.insertUser(userName, userPassword)) {
-                                db.updateRegistrationStatus(userRegistrationCode);
-                                showToastMessage("User successfully registered");
-                                Intent intent = new Intent(this, MainActivity.class);
-                                startActivity(intent);
-                            }
+                        registerUser(userName, userPassword, userRegistrationCode);
 
-                        }
                     } else {
                         showToastMessage("Registration Code is not active or already used");
                     }
@@ -80,7 +76,17 @@ public class RegisterActivity extends AppCompatActivity {
         } finally {
             db.close();
         }
+    }
 
-
+    private void registerUser(String userName, String userPassword, String userRegistrationCode) {
+        //insert into doctor table and registration table set
+        if (userName != null && userPassword != null) {
+            if (dbLogin.insertUser(userName, userPassword)) {
+                db.updateRegistrationStatus(userRegistrationCode);
+                showToastMessage("User successfully registered");
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+            }
+        }
     }
 }

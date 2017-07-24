@@ -40,21 +40,7 @@ public class MainActivity extends AppCompatActivity {
             userPassword = txtUserPassword.getText().toString();
         }
         try {
-            db = new DBHelperLogin(this);
-            Cursor rs = db.getData(userName);
-            if (rs.moveToFirst()) {
-                String pwd = rs.getString(rs.getColumnIndex(DBHelperLogin.DOCTOR_PASSWORD));
-
-                if (!rs.isClosed()) {
-                    rs.close();
-                }
-
-                if (pwd.equals(userPassword)) {
-                    Intent intent = new Intent(this, DoctorMenuActivity.class);
-                    intent.putExtra("admin", isAdmin);
-                    startActivity(intent);
-                }
-            }
+            validateUser(userName, userPassword, isAdmin);
 
         } catch (SQLException e) {
             Log.e("ERROR", e.toString());
@@ -63,7 +49,24 @@ public class MainActivity extends AppCompatActivity {
         } finally {
             db.close();
         }
+    }
 
+    private void validateUser(String userName, String userPassword, boolean isAdmin) {
+        db = new DBHelperLogin(this);
+        Cursor rs = db.getData(userName);
+        if (rs.moveToFirst()) {
+            String pwd = rs.getString(rs.getColumnIndex(DBHelperLogin.DOCTOR_PASSWORD));
+
+            if (!rs.isClosed()) {
+                rs.close();
+            }
+
+            if (pwd.equals(userPassword)) {
+                Intent intent = new Intent(this, DoctorMenuActivity.class);
+                intent.putExtra("admin", isAdmin);
+                startActivity(intent);
+            }
+        }
     }
 
     public void onClickRegister(View view) {

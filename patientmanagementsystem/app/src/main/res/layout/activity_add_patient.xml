@@ -39,7 +39,7 @@
                 android:text="First Name"/>
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/edtFirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -59,7 +59,7 @@
                 android:text="Last Name"/>
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/edtLastName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -79,7 +79,7 @@
                 android:text="Email"/>
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/edtEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -99,7 +99,7 @@
                 android:text="Mobile"/>
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/edtMobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -119,7 +119,27 @@
                 android:text="Age"/>
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/edtAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"/>
+
+            <EditText
+                android:id="@+id/edtAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -139,7 +159,7 @@
                 android:text="Blood Group"/>
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/edtBloodGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -159,7 +179,7 @@
                 android:text="Gender"/>
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/edtGender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -179,9 +199,10 @@
                 />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btnSaveAndProceed"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="OnClickSave"
                 android:text="Save and Proceed"/>
 
             <TextView

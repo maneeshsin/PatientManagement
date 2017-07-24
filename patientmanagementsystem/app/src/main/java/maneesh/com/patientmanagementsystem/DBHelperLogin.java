@@ -26,15 +26,12 @@ public class DBHelperLogin extends SQLiteOpenHelper {
 
         db.execSQL("INSERT INTO " + DOCTOR_TABLE_NAME + " (" + DOCTOR_USERNAME + "," + DOCTOR_PASSWORD + ")VALUES ('maneeshsin', 'test')");
         db.execSQL("INSERT INTO " + DOCTOR_TABLE_NAME + " (" + DOCTOR_USERNAME + "," + DOCTOR_PASSWORD + ")VALUES ('admin', 'admin')");
-
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS doctor");
         onCreate(db);
-
     }
 
     public DBHelperLogin(Context context) {
@@ -48,7 +45,7 @@ public class DBHelperLogin extends SQLiteOpenHelper {
         return res;
     }
 
-    public boolean insertUser (String userName, String namePassword) {
+    public boolean insertUser(String userName, String namePassword) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues user = new ContentValues();
         user.put(DOCTOR_USERNAME, userName);
