@@ -17,7 +17,7 @@
             android:layout_height="match_parent">
             <TextView
                 android:id="@+id/textView2"
-                android:text="Medical Input"
+                android:text="@string/medical_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
@@ -36,7 +36,7 @@
                 android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Condition"/>
+                android:text="@string/condition"/>
 
             <EditText
                 android:id="@+id/editText5"
@@ -56,7 +56,7 @@
                 android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Medication"/>
+                android:text="@string/medication"/>
 
             <EditText
                 android:id="@+id/editText5"
@@ -76,7 +76,7 @@
                 android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enter Note"/>
+                android:text="@string/enter_note"/>
 
             <EditText
                 android:id="@+id/editText5"
@@ -103,7 +103,7 @@
                 android:id="@+id/button5"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Save"/>
+                android:text="@string/save"/>
 
             <TextView
                 android:id="@+id/textView12"

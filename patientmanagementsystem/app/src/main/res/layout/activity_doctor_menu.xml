@@ -51,7 +51,7 @@
             android:layout_below="@+id/btnAddPatient"
             android:layout_marginTop="24dp"
             android:onClick="OnClickSearchByDate"
-            android:text="Search By Date"/>
+            android:text="@string/search_by_date"/>
     </TableRow>
 
     <TableRow
@@ -66,7 +66,7 @@
             android:layout_below="@+id/btnSearchByDate"
             android:layout_marginTop="20dp"
             android:onClick="OnClickSearchByName"
-            android:text="Search By Name"/>
+            android:text="@string/search_by_name"/>
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
             android:layout_below="@+id/btnSearchByDate"
             android:layout_marginTop="20dp"
             android:onClick="OnClickGenerateRegistrationCode"
-            android:text="Generate Registration Code"/>
+            android:text="@string/generate_registration_code"/>
     </TableRow>
 
 

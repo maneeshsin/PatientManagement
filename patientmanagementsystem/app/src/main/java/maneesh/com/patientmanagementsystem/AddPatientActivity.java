@@ -1,7 +1,10 @@
 package maneesh.com.patientmanagementsystem;
 
+import android.database.SQLException;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -16,6 +19,7 @@ public class AddPatientActivity extends AppCompatActivity {
     private EditText txtMobileNumber = null;
     private EditText txtAge = null;
     private EditText txtBloodGroup = null;
+    private DBHelperAddPatient db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +43,38 @@ public class AddPatientActivity extends AppCompatActivity {
         validateUserInput(firstName, lastName, email, mobileNumber);
 
         //insert into db
+        PatientInfo p = setPatientInfo(firstName, lastName, email, gender, address, mobileNumber, age, bloodGroup);
+        db = new DBHelperAddPatient(this);
 
+        try {
 
+            if (db != null) {
+                if (db.insertPatientInfo(p)) {
+                    showToastMessage("Patient Data successfully saved.");
+                }
+            }
+
+        } catch (SQLException e) {
+            Log.e("ERROR", e.toString());
+        } catch (Exception e) {
+            Log.e("ERROR", e.toString());
+        } finally {
+            db.close();
+        }
+    }
+
+    @NonNull
+    private PatientInfo setPatientInfo(String firstName, String lastName, String email, String gender, String address, String mobileNumber, String age, String bloodGroup) {
+        PatientInfo p = new PatientInfo();
+        p.setFirstName(firstName);
+        p.setLastName(lastName);
+        p.setEmail(email);
+        p.setGender(gender);
+        p.setAddress(address);
+        p.setMobileNumber(mobileNumber);
+        p.setBloodGroup(bloodGroup);
+        p.setAge(Integer.parseInt(age));
+        return p;
     }
 
     private void validateUserInput(String firstName, String lastName, String email, String mobileNumber) {
@@ -67,7 +101,6 @@ public class AddPatientActivity extends AppCompatActivity {
     public void showToastMessage(String msg) {
         Toast.makeText(AddPatientActivity.this, msg, Toast.LENGTH_LONG).show();
     }
-
 
     private void assignEditField() {
         txtFirstName = (EditText) findViewById(R.id.edtFirstName);

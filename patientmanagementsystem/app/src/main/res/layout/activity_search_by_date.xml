@@ -18,7 +18,7 @@
             android:layout_height="match_parent">
             <TextView
                 android:id="@+id/textView2"
-                android:text="Search By Date"
+                android:text="@string/search_by_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
@@ -36,7 +36,7 @@
                 android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date Of Arrival"/>
+                android:text="@string/registration_date"/>
 
             <EditText
                 android:id="@+id/editText5"
@@ -64,7 +64,7 @@
                 android:id="@+id/button5"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Search"/>
+                android:text="@string/search"/>
 
             <TextView
                 android:id="@+id/textView12"
