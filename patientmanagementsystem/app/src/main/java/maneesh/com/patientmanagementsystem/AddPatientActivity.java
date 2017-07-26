@@ -1,5 +1,6 @@
 package maneesh.com.patientmanagementsystem;
 
+import android.database.Cursor;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -27,7 +28,7 @@ public class AddPatientActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_patient);
     }
 
-    public void OnClickSave(View view){
+    public void OnClickSave(View view) {
 
         assignEditField();
 
@@ -49,8 +50,14 @@ public class AddPatientActivity extends AppCompatActivity {
         try {
 
             if (db != null) {
-                if (db.insertPatientInfo(p)) {
-                    showToastMessage("Patient Data successfully saved.");
+                Cursor rs = db.getData(firstName, lastName, email);
+                if (rs.moveToFirst()) {
+                    showToastMessage("Duplicate patient data.");
+                } else {
+
+                    if (db.insertPatientInfo(p)) {
+                        showToastMessage("Patient Data successfully saved.Click the back button to return to previous menu");
+                    }
                 }
             }
 
@@ -78,21 +85,21 @@ public class AddPatientActivity extends AppCompatActivity {
     }
 
     private void validateUserInput(String firstName, String lastName, String email, String mobileNumber) {
-        if (firstName.equals("")){
+        if (firstName.equals("")) {
             showToastMessage("First Name is blank");
             return;
         }
-        if (lastName.equals("")){
+        if (lastName.equals("")) {
             showToastMessage("Last Name is blank");
             return;
         }
 
-        if (mobileNumber.equals("")){
+        if (mobileNumber.equals("")) {
             showToastMessage("Mobile  Number is blank");
             return;
         }
 
-        if (email.equals("")){
+        if (email.equals("")) {
             showToastMessage("email is blank");
             return;
         }

@@ -28,4 +28,5 @@
     <string name="save">sparen</string>
     <string name="registration_code">Registrierungscode</string>
     <string name="registration_date">Datum der Registrierung</string>
+    <string name="select_date">Select Date</string>
 </resources>

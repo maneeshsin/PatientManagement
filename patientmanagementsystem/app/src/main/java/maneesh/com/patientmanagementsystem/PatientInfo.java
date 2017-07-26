@@ -1,5 +1,7 @@
 package maneesh.com.patientmanagementsystem;
 
+import java.util.Date;
+
 /**
  * Created by manish on 7/24/17.
  */
@@ -13,6 +15,27 @@ public class PatientInfo {
     private String gender;
     private String address;
     private String bloodGroup;
+    private String condition;
+    private String medication;
+    private String note;
+    private Date lastVisited;
+    private static final String EMPTY_STRING = "";
+
+    void PatientInfo() {
+        firstName = null;
+        lastName = null;
+        email = null;
+        mobileNumber = null;
+        age = null;
+        gender = null;
+        address = null;
+        bloodGroup = null;
+        condition = null;
+        medication = null;
+        note = null;
+        lastVisited = null;
+    }
+
 
     public String getFirstName() {
         return firstName;
@@ -35,7 +58,7 @@ public class PatientInfo {
         return email;
     }
 
-    public void setEmail(String email) {;
+    public void setEmail(String email) {
         this.email = email;
 
     }
@@ -79,4 +102,51 @@ public class PatientInfo {
     public void setBloodGroup(String address) {
         this.bloodGroup = bloodGroup;
     }
+
+    public String getCondition() {
+        if (condition == null) {
+            condition = EMPTY_STRING;
+        }
+        return condition;
+    }
+
+    public void setCondition(String address) {
+        this.condition = condition;
+    }
+
+    public String getMedication() {
+
+        if (medication == null) {
+            medication = EMPTY_STRING;
+        }
+        return medication;
+    }
+
+    public void setMedication(String medication) {
+        this.medication = medication;
+    }
+
+    public String getNote() {
+        if (note == null) {
+            note = EMPTY_STRING;
+        }
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public Date getLastVisited() {
+
+        if (lastVisited == null) {
+            lastVisited = new Date();
+        }
+        return lastVisited;
+    }
+
+    public void setlastVisited(Date lastVisited) {
+        this.lastVisited = lastVisited;
+    }
+
 }

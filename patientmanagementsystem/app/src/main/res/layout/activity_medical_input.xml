@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/MyColor"
-    tools:context="maneesh.com.patientmanagementsystem.AddPatientActivity">
+    tools:context="maneesh.com.patientmanagementsystem.MedicalInputActivity">
 
     <TableLayout
         android:layout_width="match_parent"
